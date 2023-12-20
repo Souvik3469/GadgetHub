@@ -6,7 +6,7 @@ import 'package:velocity_x/velocity_x.dart';
 class HomeDetailPage extends StatelessWidget {
   final Item catalog;
 
-  const HomeDetailPage({Key key, @required this.catalog})
+  const HomeDetailPage({Key? key, required this.catalog})
       : assert(catalog != null),
         super(key: key);
   @override

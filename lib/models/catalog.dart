@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class CatalogModel {
-  static List<Item> items;
+  static List<Item> items = [];
 
   // Get Item by ID
   Item getById(int id) =>
@@ -20,21 +20,21 @@ class Item {
   final String image;
 
   Item({
-    this.id,
-    this.name,
-    this.desc,
-    this.price,
-    this.color,
-    this.image,
+    required this.id,
+    required this.name,
+    required this.desc,
+    required this.price,
+    required this.color,
+    required this.image,
   });
 
   Item copyWith({
-    int id,
-    String name,
-    String desc,
-    num price,
-    String color,
-    String image,
+    int? id,
+    String? name,
+    String? desc,
+    num? price,
+    String? color,
+    String? image,
   }) {
     return Item(
       id: id ?? this.id,
@@ -58,15 +58,13 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
-    if (map == null) return null;
-
     return Item(
-      id: map['id'],
-      name: map['name'],
-      desc: map['desc'],
-      price: map['price'],
-      color: map['color'],
-      image: map['image'],
+      id: map['id'] ?? 0,
+      name: map['name'] ?? '',
+      desc: map['desc'] ?? '',
+      price: map['price'] ?? 0,
+      color: map['color'] ?? '',
+      image: map['image'] ?? '',
     );
   }
 

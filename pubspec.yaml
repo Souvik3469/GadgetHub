@@ -1,5 +1,5 @@
 name: flutter2
-description: A new Flutter project.
+description: Gadget Catalogue.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -18,13 +18,13 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.1
-  google_fonts: ^2.0.0
+  google_fonts: ^4.0.4
   http: ^0.13.0
   velocity_x: ^3.3.0
 

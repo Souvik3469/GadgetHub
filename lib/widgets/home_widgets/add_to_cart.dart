@@ -8,8 +8,8 @@ import 'package:velocity_x/velocity_x.dart';
 class AddToCart extends StatelessWidget {
   final Item catalog;
   AddToCart({
-    Key key,
-    this.catalog,
+    Key? key,
+    required this.catalog,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,8 @@ class AddToCart extends StatelessWidget {
         }
       },
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
+          backgroundColor:
+              MaterialStateProperty.all(context.theme.colorScheme.primary),
           shape: MaterialStateProperty.all(
             StadiumBorder(),
           )),

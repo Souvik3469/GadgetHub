@@ -12,7 +12,8 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         // title: "Cart".text.make(),
 
-        title: "Cart".text.bold.color(context.theme.accentColor).make(),
+        title:
+            "Cart".text.bold.color(context.theme.colorScheme.secondary).make(),
       ),
       body: Column(
         children: [
@@ -40,7 +41,7 @@ class _CartTotal extends StatelessWidget {
               return "\$${_cart.totalPrice}"
                   .text
                   .xl5
-                  .color(context.theme.accentColor)
+                  .color(context.theme.colorScheme.secondary)
                   .make();
             },
           ),
@@ -52,8 +53,8 @@ class _CartTotal extends StatelessWidget {
               ));
             },
             style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(context.theme.buttonColor)),
+                backgroundColor: MaterialStateProperty.all(
+                    context.theme.colorScheme.primary)),
             child: "Buy".text.white.make(),
           ).w32(context)
         ],
